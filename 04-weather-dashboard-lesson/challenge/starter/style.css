@@ -1,57 +1,57 @@
 .border {
 
-border: 1px solid black;
-padding: 10px;
-margin-bottom: 20px;
-}
-
-#forecast {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-}
-
-.day {
-    margin: 10px;
     border: 1px solid black;
-}
-
-.search-history {
-    background-color:rgb(209, 202, 202);
-    margin: 10px;
-    border-radius: 10px;
-    line-height: 40px;
-    border-style: none;
-}
-
-.weather-search {
-    width: 300px;
-    line-height: 40px;
-    border-radius: 10px;
-    margin-left: 10px;
-}
-
-#search-button2 {
-    background-color: rgb(218, 243, 205);
-    margin-top: 20px;
-    width: 300px;
-    border-radius: 10px !important;
-    line-height: 30px;
-    margin-left: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    }
     
-}
-
-#header {
-    background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
-}
-
-h2 {
-    margin-left: 10px;
-}
-
-.button1 {
-    background-color:rgb(209, 202, 202);
-    margin: 10px;
-    border-radius: 10px;
-    line-height: 40px;
-    border-style: none;
-}
+    #forecast {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    
+    .day {
+        margin: 10px;
+        border: 1px solid black;
+    }
+    
+    .search-history {
+        background-color:rgb(209, 202, 202);
+        margin: 10px;
+        border-radius: 10px;
+        line-height: 40px;
+        border-style: none;
+    }
+    
+    .weather-search {
+        width: 300px;
+        line-height: 40px;
+        border-radius: 10px;
+        margin-left: 10px;
+    }
+    
+    #search-button2 {
+        background-color: rgb(218, 243, 205);
+        margin-top: 20px;
+        width: 300px;
+        border-radius: 10px !important;
+        line-height: 30px;
+        margin-left: 10px;
+        
+    }
+    
+    #header {
+        background-image: linear-gradient(to right, #c6ffdd, #fbd786, #f7797d);
+    }
+    
+    h2 {
+        margin-left: 10px;
+    }
+    
+    .button1 {
+        background-color:rgb(209, 202, 202);
+        margin: 10px;
+        border-radius: 10px;
+        line-height: 40px;
+        border-style: none;
+    }
