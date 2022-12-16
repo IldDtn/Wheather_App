@@ -1,7 +1,5 @@
 // need to add date with moment js
 var date = moment();
-// $("#currentDay").text(date.format("D MMM YYYY"));
-
 // 1
 
 // add city to search history
@@ -97,9 +95,11 @@ function getCityCoordinates() {
                     var temperature = data1.main.temp;
                     var humidity = data1.main.humidity;
                     var wind = data1.wind.speed;
+                    var icon = data1.weather[0].icon;
+                    var iconURL = 'https://openweathermap.org/img/w/';
                     // add to DOM, do I need a forloop to make it disappear and create new?
                     var today = document.querySelector('.border');
-                    today.insertAdjacentHTML('beforeend', `<h1>${searchedCity} <span class='date'> ${date.format("D MMM YYYY")} </span> </h1>
+                    today.insertAdjacentHTML('beforeend', `<h1>${searchedCity} <span class='date'> ${date.format("D MMM YYYY")} ${iconURL + icon + '.png'}</span> </h1>
                     <p> Temperature : ${temperature} &#8451</p>
                     <p> Humidity: ${humidity} %</p>
                     <p> Wind: ${wind} KPH</p>`)
@@ -109,3 +109,5 @@ function getCityCoordinates() {
         })
 };
 
+// localstorage, make sure they stay as buttons
+// data validation
