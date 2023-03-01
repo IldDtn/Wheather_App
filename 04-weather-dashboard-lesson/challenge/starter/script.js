@@ -105,7 +105,7 @@ function getCityCoordinates() {
                     <p> Humidity: ${humidity} %</p>
                     <p> Wind: ${wind} KPH</p>`)
                 });
-                var responsePromise3 = fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lati}&lon=${longt}&appid=30f62bac5796553c7e164d11c08eac11`);
+                var responsePromise3 = fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lati}&lon=${longt}&appid=30f62bac5796553c7e164d11c08eac11&units=metric`);
                 
                 function handleResponse(responseObj2) {
                     return responseObj2.json();
@@ -122,8 +122,8 @@ function getCityCoordinates() {
                     var day = document.querySelector('.day');
                     day.insertAdjacentHTML('beforeend', `
                     <p> Date : ${forecastDate} </p>
-                    <p> Temperature : ${forecastTemperature} </p>
-                    <p> Humidity : ${forecastHumidity} </p>`)
+                    <p> Temperature : ${forecastTemperature} &#8451</p>
+                    <p> Humidity : ${forecastHumidity} %</p>`)
 
                     
                 });
@@ -135,9 +135,3 @@ function getCityCoordinates() {
 
     };
 
-
-// localstorage, make sure they stay as buttons
-// data validation
-// make last item disappear from output
-// icon not working
-// 5 day forecast
