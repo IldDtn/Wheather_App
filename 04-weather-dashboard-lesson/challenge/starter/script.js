@@ -115,6 +115,16 @@ function getCityCoordinates() {
                 .then(handleResponse)
                 .then(function (data2) {
                     console.log(data2)
+                    var forecastDate = data2.cod;
+                    // var forecastTemperature = data2.list.main.temp;
+                    // var forecastHumidity =  data2.list.main.humidity;
+
+                    var day = document.querySelector('.day');
+                    day.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate} </p>
+                    <p> Temperature: ${forecastTemperature} </p>
+                    <p> Humidity: ${forecastHumidity} </p>`)
+
                     
                 });
                 
