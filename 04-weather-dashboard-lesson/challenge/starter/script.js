@@ -115,15 +115,25 @@ function getCityCoordinates() {
                 .then(handleResponse)
                 .then(function (data2) {
                     console.log(data2)
-                    var forecastDate = data2.list[0].dt_txt;
-                    var forecastTemperature = data2.list[0].main.temp;
-                    var forecastHumidity =  data2.list[0].main.humidity;
+                    var forecastDate1 = data2.list[0].dt_txt;
+                    var forecastTemperature1 = data2.list[0].main.temp;
+                    var forecastHumidity1 =  data2.list[0].main.humidity;
 
-                    var day = document.querySelector('.day');
-                    day.insertAdjacentHTML('beforeend', `
-                    <p> Date : ${forecastDate} </p>
-                    <p> Temperature : ${forecastTemperature} &#8451</p>
-                    <p> Humidity : ${forecastHumidity} %</p>`)
+                    var day1 = document.querySelector('#day1');
+                    day1.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate1} </p>
+                    <p> Temperature : ${forecastTemperature1} &#8451</p>
+                    <p> Humidity : ${forecastHumidity1} %</p>`)
+
+                    var forecastDate2 = data2.list[8].dt_txt;
+                    var forecastTemperature2 = data2.list[8].main.temp;
+                    var forecastHumidity2 =  data2.list[8].main.humidity;
+
+                    var day2 = document.querySelector('#day2');
+                    day2.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate2} </p>
+                    <p> Temperature : ${forecastTemperature2} &#8451</p>
+                    <p> Humidity : ${forecastHumidity2} %</p>`)
 
                     
                 });
