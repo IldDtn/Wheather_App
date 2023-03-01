@@ -97,6 +97,7 @@ function getCityCoordinates() {
                     var wind = data1.wind.speed;
                     var icon = data1.weather[0].icon;
                     var iconURL = 'https://openweathermap.org/img/w/';
+
                     // add to DOM, do I need a forloop to make it disappear and create new?
                     var today = document.querySelector('.border');
                     today.insertAdjacentHTML('beforeend', `<h1>${searchedCity} <span class='date'> ${date.format("D MMM YYYY")} ${iconURL + icon + '.png'}</span> </h1>
@@ -104,10 +105,29 @@ function getCityCoordinates() {
                     <p> Humidity: ${humidity} %</p>
                     <p> Wind: ${wind} KPH</p>`)
                 });
+                var responsePromise3 = fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${lati}&lon=${longt}&appid=30f62bac5796553c7e164d11c08eac11`);
+                
+                function handleResponse(responseObj2) {
+                    return responseObj2.json();
+                }
 
+                responsePromise3
+                .then(handleResponse)
+                .then(function (data2) {
+                    console.log(data2)
+                    
+                });
+                
+                
 
         })
-};
+    
+
+    };
+
 
 // localstorage, make sure they stay as buttons
 // data validation
+// make last item disappear from output
+// icon not working
+// 5 day forecast
