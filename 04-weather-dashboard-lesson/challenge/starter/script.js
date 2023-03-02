@@ -115,15 +115,61 @@ function getCityCoordinates() {
                 .then(handleResponse)
                 .then(function (data2) {
                     console.log(data2)
-                    var forecastDate = data2.list[0].dt_txt;
-                    var forecastTemperature = data2.list[0].main.temp;
-                    var forecastHumidity =  data2.list[0].main.humidity;
+                    var forecastDate1 = data2.list[0].dt_txt;
+                    var forecastDate1s = forecastDate1.substring(0, forecastDate1.length - 8);
+                    var forecastTemperature1 = data2.list[0].main.temp;
+                    var forecastHumidity1 =  data2.list[0].main.humidity;
 
-                    var day = document.querySelector('.day');
-                    day.insertAdjacentHTML('beforeend', `
-                    <p> Date : ${forecastDate} </p>
-                    <p> Temperature : ${forecastTemperature} &#8451</p>
-                    <p> Humidity : ${forecastHumidity} %</p>`)
+                    var day1 = document.querySelector('#day1');
+                    day1.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate1s} </p>
+                    <p> Temperature : ${forecastTemperature1} &#8451</p>
+                    <p> Humidity : ${forecastHumidity1} %</p>`)
+
+                    var forecastDate2 = data2.list[8].dt_txt;
+                    var forecastDate2s = forecastDate2.substring(0, forecastDate2.length - 8);
+                    var forecastTemperature2 = data2.list[8].main.temp;
+                    var forecastHumidity2 =  data2.list[8].main.humidity;
+
+                    var day2 = document.querySelector('#day2');
+                    day2.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate2s} </p>
+                    <p> Temperature : ${forecastTemperature2} &#8451</p>
+                    <p> Humidity : ${forecastHumidity2} %</p>`)
+
+                    var forecastDate3 = data2.list[16].dt_txt;
+                    var forecastDate3s = forecastDate3.substring(0, forecastDate3.length - 8);
+                    var forecastTemperature3 = data2.list[16].main.temp;
+                    var forecastHumidity3 =  data2.list[16].main.humidity;
+
+                    var day3 = document.querySelector('#day3');
+                    day3.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate3s} </p>
+                    <p> Temperature : ${forecastTemperature3} &#8451</p>
+                    <p> Humidity : ${forecastHumidity3} %</p>`)
+
+                    var forecastDate4 = data2.list[24].dt_txt;
+                    var forecastDate4s = forecastDate4.substring(0, forecastDate4.length - 8);
+                    var forecastTemperature4 = data2.list[24].main.temp;
+                    var forecastHumidity4 =  data2.list[24].main.humidity;
+
+                    var day4 = document.querySelector('#day4');
+                    day4.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate4s} </p>
+                    <p> Temperature : ${forecastTemperature4} &#8451</p>
+                    <p> Humidity : ${forecastHumidity4} %</p>`)
+                     
+                    var forecastDate5 = data2.list[32].dt_txt;
+                    var forecastDate5s = forecastDate5.substring(0, forecastDate5.length - 8); 
+                    var forecastTemperature5 = data2.list[32].main.temp;
+                    var forecastHumidity5 =  data2.list[32].main.humidity;
+
+                    var day5 = document.querySelector('#day5');
+                    day5.insertAdjacentHTML('beforeend', `
+                    <p> Date : ${forecastDate5s} </p>
+                    <p> Temperature : ${forecastTemperature5} &#8451</p>
+                    <p> Humidity : ${forecastHumidity5} %</p>`)
+                    
 
                     
                 });
